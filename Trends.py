@@ -62,4 +62,4 @@ trends = Trends()
 while True:
     print("Saving "+time.strftime("%T", time.gmtime()))
     trends.updateTrends()
-    time.sleep(60*10)
+    time.sleep(60*60)
