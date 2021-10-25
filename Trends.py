@@ -7,6 +7,8 @@ import pandas as pd
 
 pd.options.display.max_columns = 100
 
+INTERVAL = 60*60 #Interval in seconds 
+
 class Trends:
     fileName = "Trends.csv"
     url = 'https://api.coinmarketcap.com/data-api/v3/topsearch/rank?timeframe=24h&top=30'
@@ -62,4 +64,4 @@ trends = Trends()
 while True:
     print("Saving "+time.strftime("%T", time.gmtime()))
     trends.updateTrends()
-    time.sleep(60*60)
+    time.sleep(INTERVAL)
